@@ -22,13 +22,14 @@ This is a Django-based API for managing a library system. The API allows users t
 1. Clone the repository:
 ```bash
 git clone https://github.com/Mohamed-Ahmed-12/Library-django-API.git
+```
 
 2. Navigate to the project directory:
-
+```bash
 cd Library-django-API
-
+```
 3. Create a virtual environment and activate it:
-
+```bash
 For Windows:
 
 python -m venv env
@@ -38,41 +39,34 @@ For Mac/Linux:
 
 python3 -m venv env
 source env/bin/activate
-
+```
 4. Install the required dependencies:
-
+```bash
 pip install -r requirements.txt
-
+```
 5. Set up the database:
-
+```bash
 python manage.py migrate
-
+```
 6. Create a superuser (optional, for admin access):
-
+```bash
 python manage.py createsuperuser
-
+```
 7. Run the development server:
-
+```bash
 python manage.py runserver
-
+```
 8. Access the API:
 
 The API will be accessible at http://127.0.0.1:8000/. You can start interacting with it via Postman or any HTTP client.
-API Endpoints
 
-    GET /books/: Get all books.
-    GET /books/{id}/: Get details of a specific book by ID.
-    GET /favorites/: Get the user's favorite books and recommendations.
-    POST /favorites/{id}/: Add a book to the user's favorites.
-    DELETE /favorites/{id}/: Remove a book from the user's favorites.
-    GET /search/: Search for books by title or author.
 
 Testing
 
 To test the API, you can use Postman or any other API testing tool. You’ll need to include authentication headers (JWT token) for the routes that require authentication.
 Example of Authorization (JWT):
 
-    Login and get token: POST /api/token/
+    Login and get token: POST /api/token/obtain/
         Provide username and password.
         You will receive an access token and a refresh token.
     Use the access token to authorize API requests.
